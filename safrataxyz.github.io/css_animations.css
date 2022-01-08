@@ -1,0 +1,126 @@
+/* animation styles */
+
+main {
+    height: 100vh;
+    display: flex;
+}
+
+div.box {
+    width: 50vh;
+    height: 50vh;
+    background-color: #000000;
+    margin: auto;
+    align-self: center;
+    z-index: 1;
+    display: grid;
+    grid-template: 
+        "ltop mtop rtop"
+        "lmid mmid rmid"
+        "lbot mbot rbot"
+}
+
+/* animation propertoes */
+
+div.box:hover > div.big_hole{
+    animation: rotateLeftShrink 3s ease-in-out 0s 1 alternate none, growBox 2s ease-in-out 2s 1 alternate forwards;
+}
+
+div.box:hover > div.small_hole{
+    animation: rotateRight 3s ease-in-out 0s 1 alternate none;
+}
+
+
+@keyframes rotateRight {
+    10%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotateLeft {
+    10%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-90deg);
+    }
+}
+
+
+@keyframes rotateLeftShrink {
+    10%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-90deg) scale(0.33);
+    }
+}
+
+@keyframes growBox {
+    0%{
+    }
+    50%{
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(3) skew(15deg);
+    }
+}
+
+/* hole styles */
+
+div.big_hole {
+    background-color: #dcdcdc;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+    grid-area: mmid;
+}
+
+div.small_hole{
+    background-color: #dcdcdc;
+    height: 33%;
+    width: 33%;
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+}
+
+/* small hole positions */
+
+div.small_hole#small_hole1 {
+    grid-area: ltop;
+}
+
+div.small_hole#small_hole2 {
+    grid-area: mtop;
+}
+
+div.small_hole#small_hole3 {
+    grid-area: rtop;
+}
+
+div.small_hole#small_hole4 {
+    grid-area: lmid;
+}
+
+div.small_hole#small_hole5 {
+    grid-area: rmid;
+}
+
+div.small_hole#small_hole6 {
+    grid-area: lbot;
+}
+
+div.small_hole#small_hole6 {
+    grid-area: lbot;
+}
+
+div.small_hole#small_hole6 {
+    grid-area: lbot;
+}
+
