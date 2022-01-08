@@ -1,16 +1,11 @@
 /* animation styles */
 
-main {
-    height: 100vh;
-    display: flex;
-}
-
 div.box {
     width: 50vh;
     height: 50vh;
+    flex-basis: 50vh;
+    margin: 0 auto  ;
     background-color: #000000;
-    margin: auto;
-    align-self: center;
     z-index: 1;
     display: grid;
     grid-template: 
@@ -22,7 +17,7 @@ div.box {
 /* animation propertoes */
 
 div.box:hover > div.big_hole{
-    animation: rotateLeftShrink 3s ease-in-out 0s 1 alternate none, growBox 2s ease-in-out 2s 1 alternate forwards;
+    animation: rotateLeftShrink 3s ease-in-out 0s 1 alternate none, growBox 1s ease-in-out 2s 1 alternate forwards;
 }
 
 div.box:hover > div.small_hole{
@@ -61,11 +56,8 @@ div.box:hover > div.small_hole{
 @keyframes growBox {
     0%{
     }
-    50%{
-        transform: scale(3);
-    }
     100%{
-        transform: scale(3) skew(15deg);
+        transform: scale(3);
     }
 }
 
