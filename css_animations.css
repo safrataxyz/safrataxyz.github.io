@@ -7,6 +7,11 @@ div.box {
     margin: 0 auto  ;
     background-color: #000000;
     z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25vh;
+    margin-left: -25vh;
     display: grid;
     grid-template: 
         "ltop mtop rtop"
@@ -16,12 +21,12 @@ div.box {
 
 /* animation propertoes */
 
-div.box:hover > div.big_hole{
-    animation: rotateLeftShrink 3s ease-in-out 0s 1 alternate none, growBox 1s ease-in-out 2s 1 alternate forwards;
+.animate .big_hole{
+    animation: rotateLeftShrink 3s ease-in-out 0s 1 alternate none, growBox 1s ease-in-out 2s 1 alternate forwards, dissipate 750ms ease-in-out 3s 1 alternate forwards;
 }
 
-div.box:hover > div.small_hole{
-    animation: rotateRight 3s ease-in-out 0s 1 alternate none;
+.animate .small_hole{
+    animation: rotateRight 3s ease-in-out 0s 1 alternate none, dissipate 1ms linear 3s 1 alternate forwards;
 }
 
 
@@ -57,7 +62,15 @@ div.box:hover > div.small_hole{
     0%{
     }
     100%{
-        transform: scale(3);
+        transform: scale(2.66);
+    }
+}
+
+@keyframes dissipate {
+    0% {
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -71,6 +84,7 @@ div.big_hole {
     justify-self: center;
     z-index: 2;
     grid-area: mmid;
+    cursor: pointer;
 }
 
 div.small_hole{
