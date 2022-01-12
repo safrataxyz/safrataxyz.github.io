@@ -2,9 +2,14 @@ window.addEventListener('load', (event) => {
     var mail_a = document.getElementById("mail");
     var body_el = document.querySelector("body");
     
+    // code for fade in
     const mainEl =  document.querySelector(".hidden")
-    mainEl.classList.remove("hidden");
+    try {
+        mainEl.classList.remove("hidden");
+    }
+    catch {};
 
+    // code for copying mail to clipboard
     mail_a.addEventListener('click', (event) => {
         navigator.clipboard.writeText("safrata@protonmail.com");
         var hint_p = document.createElement("p");
