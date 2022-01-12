@@ -145,6 +145,10 @@ div.skills_wrapper i[title="figma"] {
         border: none;
         object-position: -20px -20px
     }
+
+    div.skills_wrapper {
+        justify-content: space-between;
+    }
 }
 
 @media only screen and (min-width: 1200px){

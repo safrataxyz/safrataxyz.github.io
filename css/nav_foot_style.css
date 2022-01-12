@@ -38,7 +38,7 @@ header a:hover{
 }
 
 
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 600px){
     header {
         height: 75px;
     }
@@ -88,7 +88,9 @@ footer i.copy:hover{
     color: #CC7722;
 }
 
-@media only screen and (min-width: 1400px){
+
+
+@media only screen and (min-width: 600px){
     footer p {
         font-size: 1.5rem;
     }

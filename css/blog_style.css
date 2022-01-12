@@ -1,0 +1,71 @@
+/* temp */
+
+h1 {
+    font-size: 3rem;
+    transition: color 250ms ease-in-out;
+}
+
+h1:hover {
+    color: #CC7722;
+}
+
+
+/* main settings */
+
+div.content_wrapper {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    transition: opacity 500ms ease-in-out;
+    display: block;
+}
+
+div.hidden {
+    opacity: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    max-width: 340px;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+@media only screen and (min-width: 480px){
+    main {
+        width: 460px;
+        justify-content: initial;
+        /* temp */
+        justify-content: space-around;
+        /* temp */
+    }
+}
+
+@media only screen and (min-width: 600px){
+    main {
+        width: 580px;
+        max-width: initial;
+    }
+    /* temp */
+    h1 {
+        font-size: 5rem;
+    }
+    /* temp */
+}
+
+@media only screen and (min-width: 1200px){
+    main {
+        width: 1000px;
+        margin: 25px auto;
+        padding-bottom: 50px;
+        
+    }
+}
+
+/* blog finder settings */
+
+
+
+/* article miniature settings */
