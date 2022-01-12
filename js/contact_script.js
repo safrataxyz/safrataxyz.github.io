@@ -1,6 +1,10 @@
 window.addEventListener('load', (event) => {
     var mail_a = document.getElementById("mail");
     var body_el = document.querySelector("body");
+    
+    const mainEl =  document.querySelector(".hidden")
+    mainEl.classList.remove("hidden");
+
     mail_a.addEventListener('click', (event) => {
         navigator.clipboard.writeText("safrata@protonmail.com");
         var hint_p = document.createElement("p");

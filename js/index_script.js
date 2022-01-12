@@ -8,20 +8,14 @@ window.addEventListener('load', (event) => {
     animationBox.addEventListener('click', (event) => {
         animationBox.classList.remove("animate");
         animationBox.remove();
-        const mainEl =  document.querySelector(".hidden")
-        mainEl.classList.remove("hidden");
+        window.location.href = "about.html";
     })
 
     bigHole.addEventListener("animationend", (event) => {
-        console.log(this.event)
-        
+     
         if (this.event.animationName === 'dissipate') {
-            console.log('Animation ended');
             animationBox.remove();
-            const mainEl =  document.querySelector(".hidden")
-            mainEl.classList.remove("hidden");
+            window.location.href = "about.html";
         }
-        
     })
 });
-

@@ -2,7 +2,7 @@
 div.content_wrapper {
     width: 100%;
     height: 100vh;
-    transition: opacity 750ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
 }
 
 div.hidden {
@@ -89,6 +89,7 @@ svg {
 p.hint {
     text-decoration: none;
     animation: dissipate 500ms ease-out forwards 750ms;
+    -webkit-animation: dissipate 500ms ease-out forwards 750ms;
     color: #dcdcdc;
 }
 

@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    height: 75px;
+    height: 50px;
     border-bottom: 3px solid #dcdcdc;
     display: flex;
     align-content: center;
@@ -28,7 +28,7 @@ header li {
 
 header a {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: #dcdcdc;
     transition: color 250ms ease-in-out;
 }
@@ -37,15 +37,14 @@ header a:hover{
     color: #CC7722;
 }
 
-@media only screen and (max-width: 480px) {
 
+@media only screen and (min-width: 1400px){
     header {
-        height: 50px;
+        height: 75px;
     }
-
     header a {
-        font-size: 1.75rem;
-    }    
+        font-size: 2rem;
+    }
 }
 
 /* footer settings */
@@ -65,11 +64,6 @@ div .footer_wrapper {
     display: flex;
 }
 
-footer p {
-    margin: auto;
-    font-size: 1.5rem;
-}
-
 footer a {
     text-decoration: none;
     color: #dcdcdc;
@@ -80,8 +74,22 @@ footer a:hover{
     color: #CC7722;
 }
 
-@media only screen and (max-width: 480px) {
+
+footer p {
+    font-size: 0.75rem;
+    margin: auto;
+}
+
+footer i.copy {
+    transition: color 250ms ease-in-out;
+}
+
+footer i.copy:hover{
+    color: #CC7722;
+}
+
+@media only screen and (min-width: 1400px){
     footer p {
-        font-size: 0.75rem;
+        font-size: 1.5rem;
     }
 }
