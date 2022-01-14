@@ -10,4 +10,10 @@ html {
     color: #DCDCDC;
     font-family: Eurostile, sans-serif;
     letter-spacing: 0.07rem;
+    transition: color 0ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+html.day {
+    background-color: #DCDCDC;
+    color: #000000;
 }

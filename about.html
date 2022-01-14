@@ -11,13 +11,15 @@
   <link rel="stylesheet" href="css/about_style.css" type="text/css">
   <link rel="stylesheet" href="css/css_animations.css" type="text/css">
   <script src="js/about_script.js"></script>
+  <script src="js/lightModeSwitchButton.js"></script>
+  <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
   <script src="https://kit.fontawesome.com/cae5775a64.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
 </head>
 
 <body>
 
-  <div class="content_wrapper hidden">
+  <div class="content_wrapper hidden_main">
 
     <header>
       <nav>
@@ -65,6 +67,10 @@
     <footer>
       <div class="footer_wrapper">
         <p><a href="contact.html"><u>made by jakub safrata</a></u> / no copyrights. no rights reserved.</p>
+        <button id="mode_switch">
+          <div class="icon_holder show" id="icon_holder_night"><span class="iconify" data-icon="bx:bxs-moon" id="night_mode"></span></div>
+          <div class="icon_holder hidden" id="icon_holder_day"><span class="iconify" data-icon="bx:bxs-sun" id="day_mode"></span></div>
+        </button>
       </div>
     </footer>
 

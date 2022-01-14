@@ -7,7 +7,7 @@ div.content_wrapper {
     display: block;
 }
 
-div.hidden {
+div.hidden_main {
     opacity: 0;
 }
 
@@ -30,7 +30,7 @@ h1 {
 }
 
 h1:hover {
-    color: #CC7722;
+    color: #CC7722 ;
 }
 
 div.name {
@@ -46,8 +46,12 @@ div.image {
     margin-right: 5px;
 }
 
+html.day div.image {
+    border: 2px solid #000000;
+}
+
 div.image:hover {
-    border: 2px solid #CC7722;
+    border: 2px solid #CC7722 !important;
 }
 
 div.image img {

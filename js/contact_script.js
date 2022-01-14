@@ -3,9 +3,9 @@ window.addEventListener('load', (event) => {
     var body_el = document.querySelector("body");
     
     // code for fade in
-    const mainEl =  document.querySelector(".hidden")
+    const mainEl =  document.querySelector(".hidden_main")
     try {
-        mainEl.classList.remove("hidden");
+        mainEl.classList.remove("hidden_main");
     }
     catch {};
 

@@ -5,7 +5,7 @@ div.content_wrapper {
     transition: opacity 500ms ease-in-out;
 }
 
-div.hidden {
+div.hidden_main {
     opacity: 0;
 }
 
@@ -25,7 +25,12 @@ a.contact_el_wrapper {
     grid-template-columns: 100px 1fr;
     width: 300px;
     color: #dcdcdc;
+    transition: color 0ms ease-in-out;
     text-decoration: none;
+}
+
+html.day a.contact_el_wrapper {
+    color: #000000
 }
 
 a.contact_el_wrapper:hover > p {
@@ -62,6 +67,10 @@ svg {
     width: 100px;
     height: 100px;
     transition: color 250ms ease-in-out;
+}
+
+html.day svg {
+    color: #000000
 }
 
 @media only screen and (max-width: 480px) {

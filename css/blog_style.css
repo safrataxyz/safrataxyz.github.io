@@ -20,7 +20,7 @@ div.content_wrapper {
     display: block;
 }
 
-div.hidden {
+div.hidden_main {
     opacity: 0;
 }
 
