@@ -19,6 +19,10 @@ div.box {
         "lbot mbot rbot"
 }
 
+html.day div.box{
+    background-color: #dcdcdc;
+}
+
 /* animation propertoes */
 
 .animate .big_hole{
@@ -89,6 +93,10 @@ div.big_hole {
     cursor: pointer;
 }
 
+html.day div.big_hole {
+    background-color: #000000;
+}
+
 div.small_hole{
     background-color: #dcdcdc;
     height: 33%;
@@ -96,6 +104,10 @@ div.small_hole{
     align-self: center;
     justify-self: center;
     z-index: 2;
+}
+
+html.day div.small_hole {
+    background-color: #000000;
 }
 
 /* small hole positions */
