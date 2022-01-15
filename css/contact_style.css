@@ -9,7 +9,6 @@ div.hidden_main {
     opacity: 0;
 }
 
-
 /* main settings */
 
 main {
@@ -40,7 +39,6 @@ a.contact_el_wrapper:hover > p {
 a.contact_el_wrapper:hover > svg {
     color: #CC7722;
 }
-
 
 a.contact_el_wrapper p {
     font-size: 4rem;
