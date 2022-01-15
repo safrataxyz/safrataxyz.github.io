@@ -43,7 +43,7 @@ html.day header a {
 }
 
 header a:hover{
-    color: #CC7722;
+    color: #CC7722 !important;
 }
 
 
@@ -90,7 +90,8 @@ html.day footer a {
 }
 
 footer a:hover{
-    color: #CC7722;
+    color: #CC7722 !important;
+    transition: color 250ms ease-in-out !important;
 }
 
 footer p {
@@ -103,7 +104,8 @@ footer i.copy {
 }
 
 footer i.copy:hover{
-    color: #CC7722;
+    color: #CC7722 !important;
+    transition: color 250ms ease-in-out !important;
 }
 
 @media only screen and (min-width: 600px){
@@ -147,6 +149,8 @@ div.show {
 }
 
 div svg.iconify {
+    display: block;
+    margin: auto;
     font-size: 1.5rem;
     color: #000000 !important;
     width: initial;
