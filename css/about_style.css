@@ -79,35 +79,42 @@ div.skills_wrapper {
     flex-basis: 100%;
 }
 
-div.skills_wrapper h2 {
+div.skills_wrapper div.skill_h2_wrapper {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 2rem;
     letter-spacing: 0.4rem;
     flex-basis: 100%;
+}
+
+h2 {
     transition: color 250ms ease-in-out;
+    width: fit-content;
 }
 
 div.skills_wrapper h2:hover{
     color: #CC7722;
 }
 
-div.skills_wrapper i {
-    width: 50px;
-    font-size: 50px;
-    margin: 0 20px 20px 0;
+div.skill_wrapper {
+    margin: 0px 20px 20px 0px;
+}
+
+svg#skill {
+    display: block;
+    font-size: 2.5rem;
+    color: #dcdcdc !important;
+    width: initial;
+    height: initial;
     transition: color 250ms ease-in-out;
 }
 
-div.skills_wrapper i:hover {
-    color: #CC7722;
+html.day svg#skill {
+    color: #000000 !important;
 }
 
-div.skills_wrapper i[title="figma"] {
-    position: relative;
-    top: 5px;
-    width: 40px;
-    font-size: 40px; 
+div.skill_wrapper:hover > #skill {
+    color: #CC7722 !important;
 }
 
 @media only screen and (min-width: 480px){
@@ -152,6 +159,14 @@ div.skills_wrapper i[title="figma"] {
     div.skills_wrapper {
         justify-content: space-between;
     }
+
+    svg#skill {
+        font-size: 2.5rem;
+    }
+
+    div.skills_wrapper h2 {
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -192,6 +207,9 @@ div.skills_wrapper i[title="figma"] {
     div.skills_wrapper h2 {
         font-size: 4rem;
         letter-spacing: 0.4rem;
-        flex-basis: 100%;
+    }
+
+    svg#skill {
+        font-size: 3.5em;
     }
 }

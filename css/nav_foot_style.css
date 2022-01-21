@@ -110,7 +110,7 @@ footer i.copy:hover{
 
 @media only screen and (min-width: 600px){
     footer p {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -148,7 +148,7 @@ div.show {
     display: initial !important;
 }
 
-div svg.iconify {
+div svg[id$='mode'].iconify {
     display: block;
     margin: auto;
     font-size: 1.5rem;
@@ -158,7 +158,7 @@ div svg.iconify {
     transition: color 250ms ease-in-out;
 }
 
-html.day div svg.iconify {
+html.day div svg[id$='mode'].iconify {
     color: #dcdcdc !important;
 }
 
@@ -202,7 +202,7 @@ div.animate_in svg {
         width: 60px;
         height: 60px;
     }
-    div svg.iconify {
+    div svg[id$='mode'].iconify {
         font-size: 2.5rem;
     }
 }
