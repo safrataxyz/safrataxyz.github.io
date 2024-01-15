@@ -1,5 +1,5 @@
-import pp from "@/images/pp.png";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import pp from "@/images/pp.png"
+import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons"
 
 export const RESUME_DATA = {
   name: "Jakub Safrata",
@@ -115,4 +115,4 @@ export const RESUME_DATA = {
       },
     },
   ],
-} as const;
+} as const

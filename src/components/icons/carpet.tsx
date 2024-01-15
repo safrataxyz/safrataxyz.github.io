@@ -1,5 +1,5 @@
-import * as React from "react";
-import type { SVGProps } from "react";
+import * as React from "react"
+import type { SVGProps } from "react"
 
 const SvgCarpet = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -86,5 +86,5 @@ const SvgCarpet = (props: SVGProps<SVGSVGElement>) => (
       />
     </g>
   </svg>
-);
-export default SvgCarpet;
+)
+export default SvgCarpet

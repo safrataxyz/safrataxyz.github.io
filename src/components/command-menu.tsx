@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
 
 import {
   CommandDialog,
@@ -11,50 +11,50 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/components/ui/command";
+} from "@/components/ui/command"
 
-import { Button } from "./ui/button";
-import { DarkModeMenu } from "./dark-mode-menu";
+import { Button } from "./ui/button"
+import { DarkModeMenu } from "./dark-mode-menu"
 
 interface Props {
-  links: { url: string; title: string }[];
+  links: { url: string; title: string }[]
 }
 
 export const CommandMenu = ({ links }: Props) => {
-  const [open, setOpen] = React.useState(false);
-  const [darkModeOpen, setDarkModeOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
+  const [darkModeOpen, setDarkModeOpen] = React.useState(false)
 
   const openDarkModeMenu = async () => {
-    setOpen(false);
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    setDarkModeOpen(true);
-  };
+    setOpen(false)
+    await new Promise((resolve) => setTimeout(resolve, 300))
+    setDarkModeOpen(true)
+  }
 
   const closeAndPrint = async () => {
-    setOpen(false);
-    await new Promise((resolve) => setTimeout(resolve, 300));
-    window.print();
-  };
+    setOpen(false)
+    await new Promise((resolve) => setTimeout(resolve, 300))
+    window.print()
+  }
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setOpen((open) => !open);
+        e.preventDefault()
+        setOpen((open) => !open)
       }
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        closeAndPrint();
+        e.preventDefault()
+        closeAndPrint()
       }
       if (e.key === "d" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        openDarkModeMenu();
+        e.preventDefault()
+        openDarkModeMenu()
       }
-    };
+    }
 
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
-  }, []);
+    document.addEventListener("keydown", down)
+    return () => document.removeEventListener("keydown", down)
+  }, [])
 
   return (
     <>
@@ -84,7 +84,7 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandGroup heading="Actions">
             <CommandItem
               onSelect={async () => {
-                closeAndPrint();
+                closeAndPrint()
               }}
             >
               <span>Print</span>
@@ -92,7 +92,7 @@ export const CommandMenu = ({ links }: Props) => {
             </CommandItem>
             <CommandItem
               onSelect={async () => {
-                openDarkModeMenu();
+                openDarkModeMenu()
               }}
             >
               <span>Switch brightness mode</span>
@@ -104,8 +104,8 @@ export const CommandMenu = ({ links }: Props) => {
               <CommandItem
                 key={url}
                 onSelect={() => {
-                  setOpen(false);
-                  window.open(url, "_blank");
+                  setOpen(false)
+                  window.open(url, "_blank")
                 }}
               >
                 <span>{title}</span>
@@ -117,5 +117,5 @@ export const CommandMenu = ({ links }: Props) => {
       </CommandDialog>
       <DarkModeMenu open={darkModeOpen} setOpen={setDarkModeOpen} />
     </>
-  );
-};
+  )
+}

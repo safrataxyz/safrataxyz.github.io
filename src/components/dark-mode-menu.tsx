@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import * as React from "react";
+import * as React from "react"
 
 import {
   CommandDialog,
@@ -8,17 +8,17 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
-import { DesktopIcon, SunIcon, CircleIcon } from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
+} from "@/components/ui/command"
+import { DesktopIcon, SunIcon, CircleIcon } from "@radix-ui/react-icons"
+import { useTheme } from "next-themes"
 
 interface Props {
-  open: boolean;
-  setOpen: (open: boolean) => void;
+  open: boolean
+  setOpen: (open: boolean) => void
 }
 
 export const DarkModeMenu = ({ open, setOpen }: Props) => {
-  const { setTheme } = useTheme();
+  const { setTheme } = useTheme()
 
   return (
     <>
@@ -28,7 +28,7 @@ export const DarkModeMenu = ({ open, setOpen }: Props) => {
           <CommandGroup heading="Theme selection">
             <CommandItem
               onSelect={async () => {
-                setTheme("system");
+                setTheme("system")
                 // setOpen(false);
               }}
             >
@@ -37,7 +37,7 @@ export const DarkModeMenu = ({ open, setOpen }: Props) => {
             </CommandItem>
             <CommandItem
               onSelect={async () => {
-                setTheme("dark");
+                setTheme("dark")
                 // setOpen(false);
               }}
             >
@@ -47,7 +47,7 @@ export const DarkModeMenu = ({ open, setOpen }: Props) => {
             </CommandItem>
             <CommandItem
               onSelect={async () => {
-                setTheme("light");
+                setTheme("light")
                 // setOpen(false);
               }}
             >
@@ -59,5 +59,5 @@ export const DarkModeMenu = ({ open, setOpen }: Props) => {
         </CommandList>
       </CommandDialog>
     </>
-  );
-};
+  )
+}
