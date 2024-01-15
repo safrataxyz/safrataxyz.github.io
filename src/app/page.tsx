@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 // import { ProjectCard } from "@/components/project-card";
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-2xl space-y-8 print:bg-white print:space-y-6">
         <div className="flex gap-4 flex-col-reverse xs:flex-row xs:items-center xs:justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold font-sans">{RESUME_DATA.name}</h1>
@@ -43,19 +43,7 @@ export default function Page() {
                   asChild
                 >
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
+                    <EnvelopeOpenIcon className="size-4 mt-[2px]" />
                   </a>
                 </Button>
               ) : null}
@@ -94,9 +82,7 @@ export default function Page() {
         </div>
         <Section>
           <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
-          </p>
+          <p className="text-pretty font-mono text-sm">{RESUME_DATA.summary}</p>
         </Section>
         <Section>
           <h2 className="text-xl font-bold mt-2 ">Work Experience</h2>
@@ -122,7 +108,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums">
                       {work.start} - {work.end}
                     </div>
                   </div>
@@ -148,7 +134,7 @@ export default function Page() {
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums">
                       {education.start} - {education.end}
                     </div>
                   </div>
