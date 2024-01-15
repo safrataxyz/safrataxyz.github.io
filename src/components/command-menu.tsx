@@ -26,7 +26,6 @@ export const CommandMenu = ({ links }: Props) => {
 
   const openDarkModeMenu = async () => {
     setOpen(false)
-    await new Promise((resolve) => setTimeout(resolve, 300))
     setDarkModeOpen(true)
   }
 
