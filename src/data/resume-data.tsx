@@ -6,14 +6,13 @@ export const RESUME_DATA = {
   initials: "JS",
   location: "Prague, Czech Republic, CET",
   locationLink: "https://www.google.com/maps/place/Prague",
-  about:
-    "Passionate Full Stack Developer dedicated to crafting the future with innovative solutions and a visionary approach.",
+  about: "Full Stack Developer who loves building cool stuff",
   summary:
-    "As a Full Stack Engineer with a passion for innovation, I've spearheaded the development of various products and tools from inception to launch. With over 3 years of experience, I have honed my skills in diverse teams to achieve the best results.",
+    "I build web apps from start to finish, turning ideas into real, working products. With 3+ years of experience, I’ve worked with teams of all sizes, learning, experimenting, and figuring out the best way to make things work smoothly. I’m all about solving problems, making things efficient, and having fun with code along the way.",
   avatar: pp,
   personalWebsiteUrl: "https://safrata.xyz",
   contact: {
-    email: "safrata@pm.me",
+    email: "safrata@protonmail.com",
     tel: undefined,
     social: [
       {
@@ -54,7 +53,8 @@ export const RESUME_DATA = {
       start: "2023",
       end: "Now",
       description:
-        "At Kosik.cz, I specialized in optimizing web applications using Vue, focusing on enhancing performance and responsivity. My role involved refining user interfaces and ensuring seamless user experience across various devices. Technologies: Vue.",
+        "Lead the frontend development of a B2B application and also lead the development of a new administration system. In addition to these roles, also specialized in optimizing web applications using Vue, focusing on responsiveness and UX friendly design.",
+      techStack: ["Vue", "Github Actions"],
     },
     {
       company: "Dronetag",
@@ -65,7 +65,16 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2023",
       description:
-        "Developed and enhanced web applications at Dronetag, specializing in React and Django. Successfully transitioned the platform from Next.js/Redux to a pure React/React Query architecture, enhancing performance and maintainability. Analyzed and implemented backend and frontend code for a new company subscription model. Helped with development of Flutter android/ios application. Technologies: React, Django, React Query, Flutter.",
+        "Developed and enhanced web applications at Dronetag, specializing in React and Django. Successfully transitioned the platform from Next.js/Redux to a pure React/React Query architecture, improving performance and maintainability. Additionally, I analyzed and implemented backend code in Django and frontend code for a new company subscription model. Also developed real-time features with FastAPI and contributed to the development of a mobile Flutter application.",
+      techStack: [
+        "React",
+        "React Query",
+        "Next.js",
+        "Django",
+        "FastAPI",
+        "Flutter",
+        "Github Actions",
+      ],
     },
     {
       company: "Deloitte",
@@ -76,7 +85,8 @@ export const RESUME_DATA = {
       start: "2021",
       end: "2022",
       description:
-        "At Deloitte, I developed robotic process automations (RPAs) that are actively used by clients on a daily basis. I maintained and wrote React code for an RPA application, ensuring its robust performance and user interface. Additionally, I conceived and implemented a system with a Python backend and a React frontend for assigning invoices to a database, significantly streamlining the invoice management process. Technologies involved include React, Python, and RPA tools.",
+        "At Deloitte, I developed robotic process automations (RPAs) that are actively used by clients on a daily basis. I maintained and wrote React code for an RPA application, ensuring its robust performance and user interface. Additionally, I conceived and implemented a system with a Python backend and a React frontend for assigning invoices to a database, significantly streamlining the invoice management process.",
+      techStack: ["React", "Python", "RPA"],
     },
   ],
   skills: [
@@ -86,9 +96,8 @@ export const RESUME_DATA = {
     },
     { name: "TypeScript", link: "https://www.typescriptlang.org/" },
     { name: "React", link: "https://react.dev/" },
-    { name: "Vue", link: "https://vuejs.org/" },
     { name: "Next.js", link: "https://nextjs.org/" },
-    { name: "Elysia.js", link: "https://elysiajs.com/" },
+    { name: "Vue", link: "https://vuejs.org/" },
     { name: "Python", link: "https://www.python.org/" },
     { name: "Django", link: "https://www.djangoproject.com/" },
     { name: "Dart", link: "https://dart.dev/" },
