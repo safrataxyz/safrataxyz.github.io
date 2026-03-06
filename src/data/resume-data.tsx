@@ -45,13 +45,34 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Knihobot",
+      link: "https://knihobot.cz",
+      badges: [],
+      title: "Full-stack Developer",
+      logo: undefined,
+      start: "2025",
+      end: "now",
+      description: `Built the frontend and backend of a new accounting application (full rewrite from PHP to TypeScript), delivering on a tight schedule with a smooth rollout.
+      Improved UX and developed new features in Next.js apps for both customers and business administrators.
+      Implemented barcode reader integration and browser-based printing for the web app.
+      `,
+      techStack: [
+        "React",
+        "Next.js",
+        "Nest.js",
+        "Github Actions",
+        "Terraform",
+        "k8s",
+      ],
+    },
+    {
       company: "Kosik.cz",
       link: "https://kosik.cz",
       badges: [],
       title: "Frontend Developer",
       logo: undefined,
       start: "2023",
-      end: "Now",
+      end: "2025",
       description:
         "Lead the frontend development of a B2B application and also lead the development of a new administration system. In addition to these roles, also specialized in optimizing web applications using Vue, focusing on responsiveness and UX friendly design.",
       techStack: ["Vue", "Github Actions"],
