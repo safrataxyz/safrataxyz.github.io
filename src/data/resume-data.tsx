@@ -6,9 +6,9 @@ export const RESUME_DATA = {
   initials: "JS",
   location: "Prague, Czech Republic, CET",
   locationLink: "https://www.google.com/maps/place/Prague",
-  about: "Full Stack Developer who loves building cool stuff",
+  about: "Full Stack Developer with a proven track record of projects that work in real life",
   summary:
-    "I build web apps from start to finish, turning ideas into real, working products. With 3+ years of experience, I’ve worked with teams of all sizes, learning, experimenting, and figuring out the best way to make things work smoothly. I’m all about solving problems, making things efficient, and having fun with code along the way.",
+    "I build web apps from start to finish, turning ideas into real, working products. With 4+ years of experience, I’ve worked with teams of all sizes, learning, experimenting, and figuring out the best way to make things work smoothly. I’m all about solving problems, making things efficient, and having fun with code along the way.",
   avatar: pp,
   personalWebsiteUrl: "https://safrata.xyz",
   contact: {
@@ -118,12 +118,14 @@ export const RESUME_DATA = {
     { name: "TypeScript", link: "https://www.typescriptlang.org/" },
     { name: "React", link: "https://react.dev/" },
     { name: "Next.js", link: "https://nextjs.org/" },
+    { name: "Hono", link: "https://hono.dev/" },
     { name: "Vue", link: "https://vuejs.org/" },
     { name: "Python", link: "https://www.python.org/" },
     { name: "Django", link: "https://www.djangoproject.com/" },
     { name: "Dart", link: "https://dart.dev/" },
     { name: "Flutter", link: "https://flutter.dev/" },
     { name: "Docker", link: "https://www.docker.com/" },
+    { name: "Kafka", link: "https://kafka.apache.org//" },
     { name: "GitHub Actions", link: "https://docs.github.com/en/actions" },
   ],
   projects: [

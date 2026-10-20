@@ -1,0 +1,259 @@
+/* Paper #FAF0C9 · Olive ink #292d25 · Marigold #FFD300
+   Terracotta #a74432 · Sage #e1e6d5 */
+.resume-page {
+  --resume-paper: #faf0c9;
+  --resume-ink: #292d25;
+  --resume-muted: #64665a;
+  --resume-line: #d6d7c8;
+  --resume-star: #ffd300;
+  --resume-accent: #292d25;
+  --resume-sage: #e1e6d5;
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: clip;
+  background: var(--resume-paper);
+  color: var(--resume-ink);
+}
+/* Stationary paper grain, separate from the moving stars and the resume text. */
+.resume-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url("/textures/grain.svg") repeat;
+  opacity: 0.14;
+  mix-blend-mode: multiply;
+}
+.dark .resume-page {
+  --resume-paper: #252920;
+  --resume-ink: #f3f0e5;
+  --resume-muted: #babeb0;
+  --resume-line: #515643;
+  --resume-star: #e6b93f;
+  --resume-accent: #efa18a;
+  --resume-sage: #3c4734;
+}
+.resume-page ::selection {
+  background: var(--resume-star);
+  color: #292d25;
+}
+.resume-page h1,
+.resume-page h2 {
+  color: var(--resume-ink);
+}
+.resume-page h2 {
+  color: var(--resume-accent);
+}
+.resume-page .text-muted-foreground {
+  color: var(--resume-muted);
+}
+.resume-page .text-stone-950,
+.resume-page .dark\:text-stone-50 {
+  color: var(--resume-ink);
+}
+.resume-page :where(a, button, summary):focus-visible {
+  outline: 2px solid var(--resume-accent);
+  outline-offset: 4px;
+}
+.resume-page a:hover {
+  color: var(--resume-accent);
+}
+.resume-page a.border {
+  background: var(--resume-paper);
+  border-color: var(--resume-line);
+}
+.resume-page a.border:hover {
+  background: var(--resume-sage);
+}
+.resume-page .rounded-full.border {
+  background: var(--resume-sage);
+  border-color: var(--resume-line);
+  color: var(--resume-ink);
+}
+.resume-page .rounded-full.border:hover {
+  background: var(--resume-line);
+}
+/* Stars stay behind the original resume layout and cannot intercept links. */
+.resume-content {
+  z-index: 1;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .resume-content {
+    padding-bottom: 6rem;
+  }
+}
+/* CSS lays out the border union immediately; one filter keeps every stripe aligned. */
+.resume-stack {
+  --section-gap: 2rem;
+  --frame-outset: 20px;
+}
+.resume-header {
+  margin-inline: calc(-1 * var(--frame-outset));
+}
+.resume-section-group {
+  --frame-width: 5px;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: var(--section-gap);
+}
+.resume-frame-definitions {
+  position: absolute;
+  pointer-events: none;
+}
+.resume-section-decoration {
+  position: relative;
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+  color: var(--resume-ink);
+  pointer-events: none;
+}
+.resume-section-decoration::before {
+  content: "";
+  position: absolute;
+  inset: calc(var(--section-gap) / -2) calc(-1 * var(--frame-outset));
+  border: var(--frame-width) solid currentColor;
+}
+.resume-frame-divider {
+  grid-column: 1;
+  align-self: start;
+  height: var(--frame-width);
+  margin-top: calc(var(--section-gap) / -2);
+  margin-inline: calc(-1 * var(--frame-outset));
+  background: currentColor;
+}
+.resume-framed-section {
+  grid-column: 1;
+  min-width: 0;
+}
+.resume-star-field {
+  position: absolute;
+  top: 0;
+  left: -64px;
+  right: -64px;
+  height: min(100%, calc(60% + 40vh));
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(16px, 3vw, 48px);
+  padding-inline: max(0px, calc((100% - 1560px) / 2));
+  pointer-events: none;
+  user-select: none;
+  transform: translate3d(0, var(--parallax-y, 0px), 0);
+  will-change: transform;
+}
+.resume-star-lane {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  container-type: size;
+}
+.resume-star-lane-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 100%;
+}
+.resume-star-lane-1 .resume-star-lane-content {
+  padding-bottom: min(64px, 5cqh);
+}
+.resume-star-lane-2 .resume-star-lane-content {
+  padding-top: min(84px, 7cqh);
+}
+.parallax-star {
+  --anchor-x: var(--edge-x);
+  --available-x: var(--scatter-space-x);
+  --base-star-height: min(
+    var(--max-height),
+    calc((100cqw * var(--available-x) - 24px) / var(--bounds-width)),
+    calc(
+      (
+          100cqh * 3 / 13 * var(--scatter-space-y) - 24px - 2 *
+            var(--drift-limit)
+        ) /
+        var(--bounds-height)
+    )
+  );
+  --star-height: calc(var(--base-star-height) * 1.875);
+  --half-outline-width: calc(var(--star-height) * var(--bounds-width) / 2);
+  position: relative;
+  flex: none;
+  height: calc(
+    var(--star-height) * var(--bounds-height) + 2 * var(--drift-limit)
+  );
+}
+.resume-star {
+  position: absolute;
+  top: 50%;
+  width: calc(var(--star-height) * var(--star-ratio));
+  height: var(--star-height);
+  display: block;
+  color: var(--resume-star);
+  transform: translate(-50%, -50%)
+    translate3d(0, var(--star-drift, var(--initial-drift)), 0)
+    rotate(var(--rotation));
+  will-change: transform;
+}
+.resume-star-lane-1 .resume-star {
+  left: min(var(--anchor-x), calc(100% - var(--half-outline-width) - 12px));
+}
+.resume-star-lane-2 .resume-star {
+  left: max(var(--anchor-x), calc(var(--half-outline-width) + 12px));
+}
+@media (max-width: 767px) {
+  .resume-stack {
+    --frame-outset: 12px;
+  }
+  .resume-header {
+    margin-inline: 0;
+  }
+  .parallax-star {
+    --star-height: calc(var(--base-star-height) * 1.5);
+  }
+  .resume-section-group {
+    --frame-width: 4px;
+  }
+  .parallax-star {
+    --anchor-x: var(--mobile-edge-x);
+    --available-x: var(--mobile-space-x);
+    opacity: 0.5;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .resume-star-field {
+    height: 100%;
+    transform: none;
+    will-change: auto;
+  }
+  .resume-star {
+    transform: translate(-50%, -50%) rotate(var(--rotation));
+    will-change: auto;
+  }
+}
+@media print {
+  .resume-stack {
+    --section-gap: 1.5rem;
+  }
+  .resume-page,
+  .dark .resume-page {
+    --resume-paper: white;
+    --resume-ink: #111;
+    --resume-muted: #444;
+    --resume-accent: #111;
+    --resume-sage: #eee;
+    --resume-line: #ddd;
+  }
+  .resume-star-field,
+  .resume-page::before {
+    display: none;
+  }
+}
